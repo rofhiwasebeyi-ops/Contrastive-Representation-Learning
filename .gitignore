@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+data/raw/aruba.txt
+data/raw/milan.txt
+*.zip
