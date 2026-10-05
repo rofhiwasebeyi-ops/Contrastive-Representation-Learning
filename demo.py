@@ -1,5 +1,5 @@
 """
-Live demo script for a presentation walkthrough. Runs ONLY the fast
+Demo script for a presentation walkthrough. Runs ONLY the fast
 pieces -- the full evidence (20-trial tuning search, both homes) takes
 ~15-20 minutes and should already be pre-generated before the demo.
 
@@ -42,9 +42,8 @@ def main():
 
     banner(
         "PART 1: Live run on real Aruba data (1.7M raw sensor events, 220 days)\n"
-        "Parsing -> daily feature engineering -> 5 continual-learning strategies\n"
-        "-> injected-deviation AUROC -> storage comparison. Watch the numbers\n"
-        "appear below -- this is real data, running now, not a slide."
+        "Parsing -> daily feature engineering -> 3 continual-learning strategies\n"
+        "-> injected-deviation AUROC -> storage comparison."
     )
     run([
         "train.py", "--home", "../data/raw/aruba.txt", "--reference-days", "14",
@@ -52,12 +51,7 @@ def main():
     ])
 
     banner(
-        "PART 2: Proving the config-comparison harness itself runs (~30s)\n"
-        "This is NOT the full reported result -- the real evidence is the\n"
-        "5-config comparison already generated in\n"
-        "outputs/figures/config_comparison.png (5/5 configs won by\n"
-        "generative_replay on Aruba). This just shows the comparison itself\n"
-        "is real and executable, live, on request."
+        "PART 2: Proving the config-comparison harness itself runs (~30s)"
     )
     run([
         "tune.py", "--home", "../data/raw/aruba.txt", "--reference-days", "14",
@@ -65,9 +59,7 @@ def main():
     ])
 
     banner(
-        "Demo complete.\n"
-        "For the full evidence, open outputs/figures/config_comparison.png\n"
-        "and outputs/figures/generated_samples_routine_shape.png (already generated)."
+        "Demo complete."
     )
 
 
