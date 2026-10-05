@@ -49,18 +49,18 @@ def main():
         "--save-json", "../outputs/results/milan.json",
     ])
 
-    run("[3/5] Config comparison: Aruba (5 hand-picked configs)", [
+    run("[3/5] Config comparison: Aruba", [
         "tune.py", "--home", "../data/raw/aruba.txt", "--reference-days", "14",
         "--n-deviations", "15", "--seeds", "1,2,3",
         "--save-json", "../outputs/results/tune_aruba.json",
     ])
-    run("[4/5] Config comparison: Milan (5 hand-picked configs)", [
+    run("[4/5] Config comparison: Milan", [
         "tune.py", "--home", "../data/raw/milan.txt", "--reference-days", "14",
         "--n-deviations", "8", "--seeds", "1,2,3",
         "--save-json", "../outputs/results/tune_milan.json",
     ])
 
-    run("[5/5] Generating figures (report + generated-output examples)", [
+    run("[5/5] Generating figures", [
         "plots.py", "--results-dir", "../outputs/results", "--outdir", "../outputs/figures",
     ])
     run("[5b/5] Generated-output examples", [
